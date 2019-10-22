@@ -27,8 +27,13 @@ function App() {
     const drawnIndex = Math.floor(Math.random() * letters[i].length);
     const letter = letters[i][drawnIndex]
     tab.push(letter);
-  }
-  console.log(tab);
+  };
+
+  console.table(tab);
+  const shuffledTab = tab;
+  shuffledTab.sort(() => Math.random() - 0.5);
+  console.table(shuffledTab);
+
 
   return (
     <div className="App">
