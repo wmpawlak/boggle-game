@@ -1,0 +1,6 @@
+.board {
+  width: 75 px;
+  height: 75 px;
+  float: "left";
+  color: red;
+};
