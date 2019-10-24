@@ -1,8 +1,8 @@
-export const lettersBoard = Array(16);
+export const lettersBoard = new Array(16).fill();
 
 export const defaultState = {
-  lettersBoard,
-  letters: [
+  lettersBoard: Array.from(lettersBoard),
+  availableLetters: [
     ['e', 'r', 'w', 't', 'a', 'ą'],
     ['o', 't', 'o', 't', 'w', 'a'],
     ['g', 'a', 'n', 'k', 'e', 'a'],

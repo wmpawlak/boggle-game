@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Letter = () => {
+const Letter = i => {
+  console.log(i);
   return (
     <div className="letter">
-      <p>kjfhsadjkf</p>
+      ljfjdslhf
     </div>
   );
 };
