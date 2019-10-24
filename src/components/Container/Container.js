@@ -10,7 +10,10 @@ const Container = ({ drawLetters }) => {
   return (
     <div>
       <Board />
-      <Button name={'start'} onClick={drawLetters} />
+      <Button name={'losuj'} onClick={drawLetters} />
+      <Button name={'czas start'} />
+      <Button name={'czas stop'} />
+      <Button name={'zasady'} />
     </div>
   );
 };
