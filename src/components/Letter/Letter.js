@@ -5,7 +5,7 @@ const Letter = () => {
     <div className="letter">
       <p>kjfhsadjkf</p>
     </div>
-  )
-}
+  );
+};
 
 export default Letter;
