@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import Letter from '../Letter/Letter';
 
-const Board = lettersBoard => {
+const Board = ({ lettersBoard }) => {
   const renderLetter = i => {
     return <Letter index={i} />;
   };
