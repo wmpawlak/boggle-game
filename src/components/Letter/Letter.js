@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import './Letter.css';
+
 const Letter = ({ index, lettersBoard }) => {
   return <div className="letter">{lettersBoard[index]}</div>;
 };
