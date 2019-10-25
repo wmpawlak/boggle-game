@@ -2,7 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  color: #000000;
+  color: #ff652F;
   font-size: 72px;
-  width: 400px;
+  width: 404px;
+  box-sizing: padding-box;
+  border: 2px solid #14a76c;
 };

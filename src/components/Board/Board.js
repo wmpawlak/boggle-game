@@ -12,7 +12,9 @@ const Board = ({ lettersBoard }) => {
   return (
     <div className="board">
       {lettersBoard.map((s, i) => (
-        <div key={i}>{renderLetter(i)}</div>
+        <div className="letter" key={i}>
+          {renderLetter(i)}
+        </div>
       ))}
     </div>
   );
