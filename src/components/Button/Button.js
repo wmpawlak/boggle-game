@@ -13,7 +13,7 @@ class Button extends React.Component {
 
 Button.propTypes = {
   name: PropTypes.string,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 
 export default Button;

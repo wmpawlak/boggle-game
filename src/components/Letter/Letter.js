@@ -2,17 +2,19 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import './Letter.css';
+
 const Letter = ({ index, lettersBoard }) => {
   return <div className="letter">{lettersBoard[index]}</div>;
 };
 
 Letter.propTypes = {
   index: PropTypes.number,
-  lettersBoard: PropTypes.array
+  lettersBoard: PropTypes.array,
 };
 
 const mapStateToProps = state => ({
-  lettersBoard: state.lettersBoard
+  lettersBoard: state.lettersBoard,
 });
 
 export default connect(

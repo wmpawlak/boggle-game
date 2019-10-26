@@ -3,22 +3,16 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import Letter from '../Letter/Letter';
+import './Board.css';
 
 const Board = ({ lettersBoard }) => {
   const renderLetter = i => {
     return <Letter index={i} />;
   };
   return (
-    <div>
+    <div className="board">
       {lettersBoard.map((s, i) => (
-        <div
-          style={{
-            width: '75px',
-            height: '75px',
-            float: 'left'
-          }}
-          key={i}
-        >
+        <div className="letter" key={i}>
           {renderLetter(i)}
         </div>
       ))}
@@ -27,11 +21,11 @@ const Board = ({ lettersBoard }) => {
 };
 
 Board.propTypes = {
-  lettersBoard: PropTypes.array
+  lettersBoard: PropTypes.array,
 };
 
 const mapStateToProps = state => ({
-  lettersBoard: state.lettersBoard
+  lettersBoard: state.lettersBoard,
 });
 
 export default connect(
