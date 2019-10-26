@@ -21,11 +21,11 @@ const Board = ({ lettersBoard }) => {
 };
 
 Board.propTypes = {
-  lettersBoard: PropTypes.array
+  lettersBoard: PropTypes.array,
 };
 
 const mapStateToProps = state => ({
-  lettersBoard: state.lettersBoard
+  lettersBoard: state.lettersBoard,
 });
 
 export default connect(

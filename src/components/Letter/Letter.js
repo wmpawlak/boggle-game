@@ -10,11 +10,11 @@ const Letter = ({ index, lettersBoard }) => {
 
 Letter.propTypes = {
   index: PropTypes.number,
-  lettersBoard: PropTypes.array
+  lettersBoard: PropTypes.array,
 };
 
 const mapStateToProps = state => ({
-  lettersBoard: state.lettersBoard
+  lettersBoard: state.lettersBoard,
 });
 
 export default connect(

@@ -21,7 +21,7 @@ const Container = ({ drawLetters }) => {
 };
 
 Container.propTypes = {
-  drawLetters: PropTypes.func
+  drawLetters: PropTypes.func,
 };
 
 const mapDispatchToProps = { drawLetters };
