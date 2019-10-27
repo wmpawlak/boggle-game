@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import Board from '../Board/Board';
 import Button from '../Button/Button';
+import Field from '../Field/Field';
 import { drawLetters } from '../../redux/actions';
 
 const Container = ({ drawLetters }) => {
@@ -16,6 +17,7 @@ const Container = ({ drawLetters }) => {
         <Button name={'czas stop'} />
         <Button name={'zasady'} />
       </div>
+      <Field />
     </div>
   );
 };
