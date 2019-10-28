@@ -1,9 +1,17 @@
-async function sjp(word) {
-  const sjpURL = 'https://sjp.pl/';
-  const response = await fetch('https://sjp.pl/s%C5%82owo', {
-    mode: 'no-cors',
-  });
-  console.log(response);
-}
+const axios = require('axios');
+const cheerio = require('cheerio');
 
-export default sjp;
+const url = 'https://sjp.pl/';
+
+axios
+  .get(url)
+  .then(response => {
+    const html = response.data;
+    const $ = cheerio.load(html);
+    const word = $('p')
+      .first()
+      .text();
+
+    console.log(word);
+  })
+  .catch(console.error);
