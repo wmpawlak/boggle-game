@@ -5,7 +5,11 @@ import PropTypes from 'prop-types';
 import './Letter.css';
 
 const Letter = ({ index, lettersBoard }) => {
-  return <div className="letter">{lettersBoard[index]}</div>;
+  return (
+    <div className="letter">
+      <p>{lettersBoard[index]}</p>
+    </div>
+  );
 };
 
 Letter.propTypes = {

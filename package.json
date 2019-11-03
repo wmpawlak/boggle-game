@@ -18,6 +18,8 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@material-ui/icons": "^4.2.1",
     "babel-eslint": "^10.0.2",
+    "cheerio": "^1.0.0-rc.3",
+    "cors": "^2.8.5",
     "enzyme-to-json": "^3.4.0",
     "eslint": "^6.1.0",
     "file-saver": "^2.0.2",
