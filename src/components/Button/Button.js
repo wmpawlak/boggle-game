@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Button.css';
+
 class Button extends React.Component {
   render() {
     return (
-      <button className="small ui grey button" onClick={this.props.onClick}>
+      <button className="buttons" onClick={this.props.onClick}>
         {this.props.name}
       </button>
     );
