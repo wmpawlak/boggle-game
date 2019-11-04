@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './SearchBar.css';
+
 class SearchBar extends React.Component {
   state = {
     word: '',
@@ -12,17 +14,25 @@ class SearchBar extends React.Component {
 
   onFormSubmit = event => {
     event.preventDefault();
-
     this.props.onFormSubmit(this.state.word);
   };
 
   render() {
     return (
-      <div className="search-bar ui segment">
-        <form className="ui form" onSubmit={this.onFormSubmit}>
-          <div className="field">
-            <label>Sprawdź słowo</label>
-            <input type="text" onChange={this.onInputChange} />
+      <div className="field-container">
+        <form onSubmit={this.onFormSubmit}>
+          <div className="wrap">
+            <div className="search">
+              <input
+                type="text"
+                className="searchTerm"
+                placeholder="Sprawdź słowo"
+                onChange={this.onInputChange}
+              />
+              <button type="submit" className="searchButton">
+                <i className="fa fa-search" />
+              </button>
+            </div>
           </div>
         </form>
       </div>

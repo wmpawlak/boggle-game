@@ -1,16 +1,12 @@
 import React from 'react';
 
 import SearchBar from '../SearchBar/SearchBar';
-import sjp from '../../apis/sjp';
 
 class SjpChecker extends React.Component {
   state = { response: [] };
 
-  onWordSubmit = async word => {
-    const response = await `https://sjp.pl/${word}`;
-    this.setState({
-      response: document.querySelector('p:nth-of-type(1)'),
-    });
+  onWordSubmit = word => {
+    window.open(`https://sjp.pl/${word}`);
   };
 
   render() {
