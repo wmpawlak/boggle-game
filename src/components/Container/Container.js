@@ -6,12 +6,13 @@ import Board from '../Board/Board';
 import Button from '../Button/Button';
 import SjpChecker from '../SjpChecker/SjpChecker';
 import { drawLetters } from '../../redux/actions';
+import './Container.css';
 
 const Container = ({ drawLetters }) => {
   return (
     <div>
       <Board />
-      <div className="buttons">
+      <div className="buttons-menu">
         <Button name={'losuj'} onClick={drawLetters} />
         <Button name={'czas start'} />
         <Button name={'czas stop'} />
