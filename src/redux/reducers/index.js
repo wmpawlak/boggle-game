@@ -20,4 +20,7 @@ export const defaultState = {
     ['e', 's', 'u', 'e', 'i', 'k'],
     ['ł', 'n', 'u', 'i', 'h', 'm'],
   ],
+  gameTime: 10,
+  currentTimerValue: 180,
+  isTimerOn: false,
 };
