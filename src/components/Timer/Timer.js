@@ -1,51 +1,34 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import FormattedTime from '../Formatted Time/FormattedTime';
 
-import './Timer.css';
-
-export class Timer extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      counter: 5,
-    };
-
-    this.tick = this.tick.bind(this);
-  }
-
-  tick() {
-    console.log('dupa');
-    if (this.state.counter > 0) {
-      this.setState({
-        counter: this.state.counter - 1,
-      });
-    }
-  }
-  componentDidMount() {
-    let timer = setInterval(this.tick, 1000);
-    if (this.state.counter === 0) {
-      console.log('interval cleaned');
-      clearInterval(timer);
-    }
-  }
-
-  render() {
-    return (
-      <div className="timer">
-        Timer Timer
-        <div> Timer</div>
-        <div>{this.state.counter}</div>
+const Clock = (clockTime, secondsElapsed) => {
+  const time = clockTime - secondsElapsed;
+  return (
+    <div className="clock-ring-one">
+      <div className="clock-ring-two">
+        <div className="clock-ring-three">
+          <div className="clock-time">
+            <FormattedTime time={time} />
+          </div>
+        </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 const mapStateToProps = state => ({
-  timerStart: state.currentTimerValue,
-})
+  clockTime: state.clockTime,
+  secondsElapsed: state.secondsElapsed,
+});
+
+Clock.propTypes = {
+  clockTime: PropTypes.number.isRequired,
+  secondsElapsed: PropTypes.number.isRequired,
+};
 
 export default connect(
   mapStateToProps,
   null
-)(Timer);
+)(Clock);
