@@ -8,7 +8,6 @@ export class Timer extends React.Component {
     super(props);
 
     this.state = {
-      timer: null,
       counter: 5,
     };
 
@@ -16,6 +15,7 @@ export class Timer extends React.Component {
   }
 
   tick() {
+    console.log('dupa');
     if (this.state.counter > 0) {
       this.setState({
         counter: this.state.counter - 1,
@@ -24,7 +24,10 @@ export class Timer extends React.Component {
   }
   componentDidMount() {
     let timer = setInterval(this.tick, 1000);
-    this.setState({ timer });
+    if (this.state.counter === 0) {
+      console.log('interval cleaned');
+      clearInterval(timer);
+    }
   }
 
   render() {
@@ -32,7 +35,7 @@ export class Timer extends React.Component {
       <div className="timer">
         Timer Timer
         <div> Timer</div>
-        <div>Loading{this.state.counter}</div>
+        <div>{this.state.counter}</div>
       </div>
     );
   }
