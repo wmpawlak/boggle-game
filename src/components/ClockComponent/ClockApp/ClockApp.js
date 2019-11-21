@@ -4,12 +4,7 @@ import PropTypes from 'prop-types';
 import Clock from '../Clock/Clock';
 import ClockControls from '../ClockControls/ClockControls';
 
-class TimerApp extends React.Component {
-  constructor(props) {
-    super(props);
-    this.alarmRef = React.createRef();
-  }
-
+class ClockApp extends React.Component {
   componentDidUpdate(prevProps) {
     const currentProps = this.props;
     if (currentProps.isTimerRunning && !prevProps.isTimerRunning) {
@@ -34,7 +29,7 @@ class TimerApp extends React.Component {
       isTimerRunning,
       isTimerPaused,
     } = this.props;
-    const { startTimer, stopTimer, resetTimer } = this.props;
+    const { startTimer, stopTimer } = this.props;
     return (
       <div>
         <div>
@@ -48,21 +43,19 @@ class TimerApp extends React.Component {
             isTimerRunning={isTimerRunning}
             onStart={startTimer}
             onStop={stopTimer}
-            onReset={resetTimer}
           />
         </div>
       </div>
     );
   }
 }
-TimerApp.propTypes = {
-  clockTime: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-  secondsElapsed: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+ClockApp.propTypes = {
+  clockTime: PropTypes.number.isRequired,
+  secondsElapsed: PropTypes.number.isRequired,
   isTimerRunning: PropTypes.bool.isRequired,
   isTimerPaused: PropTypes.bool.isRequired,
   startTimer: PropTypes.func.isRequired,
   stopTimer: PropTypes.func.isRequired,
-  resetTimer: PropTypes.func.isRequired,
   runTimer: PropTypes.func.isRequired,
 };
-export default TimerApp;
+export default ClockApp;

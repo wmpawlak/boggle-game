@@ -3,7 +3,6 @@ import {
   DRAW_LETTERS,
   START_TIMER,
   STOP_TIMER,
-  RESET_TIMER,
   RUN_TIMER,
   UPDATE_SESSION_LENGTH,
 } from '../actions/actionTypes';
@@ -19,7 +18,15 @@ export const reducer = (state = defaultState, action) => {
       lettersBoard[i] = letter;
     }
     lettersBoard.sort(() => Math.random() - 0.5);
-    return { ...state, lettersBoard };
+    return {
+      ...state,
+      lettersBoard,
+      isTimerRunning: false,
+      isTimerPaused: false,
+      isBreakTime: false,
+      clockTime: state.sessionLength !== '' ? state.sessionLength * 60 : 180, // in seconds
+      secondsElapsed: 0,
+    };
   }
   if (action.type === START_TIMER) {
     return {
@@ -33,16 +40,6 @@ export const reducer = (state = defaultState, action) => {
       ...state,
       isTimerRunning: false,
       isTimerPaused: true,
-    };
-  }
-  if (action.type === RESET_TIMER) {
-    return {
-      ...state,
-      isTimerRunning: false,
-      isTimerPaused: false,
-      isBreakTime: false,
-      clockTime: state.sessionLength !== '' ? state.sessionLength * 60 : 1500, // in seconds
-      secondsElapsed: 0,
     };
   }
   if (action.type === RUN_TIMER) {

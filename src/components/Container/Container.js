@@ -7,18 +7,18 @@ import Button from '../Button/Button';
 import SjpChecker from '../SjpChecker/SjpChecker';
 import { drawLetters } from '../../redux/actions';
 import './Container.css';
-import ClockContainer from '../ClockContainer/ClockContainer';
+import ClockContainer from '../ClockComponent/ClockContainer/ClockContainer';
 
 const Container = ({ drawLetters }) => {
   return (
     <div>
-      <Board />
       <ClockContainer />
+      <SjpChecker />
+      <Board />
       <div className="buttons-menu">
         <Button name={'losuj'} onClick={drawLetters} />
         <Button name={'zasady'} />
       </div>
-      <SjpChecker />
     </div>
   );
 };
