@@ -6,7 +6,12 @@ import './Button.css';
 class Button extends React.Component {
   render() {
     return (
-      <button className="buttons" onClick={this.props.onClick}>
+      <button
+        className="buttons"
+        onClick={this.props.onClick}
+        name={this.props.name}
+        value={this.props.value}
+      >
         {this.props.name}
       </button>
     );

@@ -5,19 +5,17 @@ import PropTypes from 'prop-types';
 import Board from '../Board/Board';
 import Button from '../Button/Button';
 import SjpChecker from '../SjpChecker/SjpChecker';
-import Timer from '../Timer/Timer';
-import { drawLetters, startTimer, stopTimer } from '../../redux/actions';
+import { drawLetters } from '../../redux/actions';
 import './Container.css';
+import ClockContainer from '../ClockContainer/ClockContainer';
 
-const Container = ({ drawLetters, startTimer, stopTimer }) => {
+const Container = ({ drawLetters }) => {
   return (
     <div>
-      <Timer />
       <Board />
+      <ClockContainer />
       <div className="buttons-menu">
         <Button name={'losuj'} onClick={drawLetters} />
-        <Button name={'czas start'} onClick={startTimer} />
-        <Button name={'czas stop'} onClick={stopTimer} />
         <Button name={'zasady'} />
       </div>
       <SjpChecker />
@@ -27,11 +25,9 @@ const Container = ({ drawLetters, startTimer, stopTimer }) => {
 
 Container.propTypes = {
   drawLetters: PropTypes.func,
-  startTimer: PropTypes.func,
-  stopTimer: PropTypes.func,
 };
 
-const mapDispatchToProps = { drawLetters, startTimer, stopTimer };
+const mapDispatchToProps = { drawLetters };
 
 export default connect(
   null,

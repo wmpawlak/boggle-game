@@ -1,9 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import FormattedTime from '../Formatted Time/FormattedTime';
+import FormattedTime from '../FormattedTime/FormattedTime';
 
-const Clock = (clockTime, secondsElapsed) => {
+function Clock(props) {
+  const { clockTime, secondsElapsed } = props;
   const time = clockTime - secondsElapsed;
   return (
     <div className="clock-ring-one">
@@ -16,19 +16,10 @@ const Clock = (clockTime, secondsElapsed) => {
       </div>
     </div>
   );
-};
-
-const mapStateToProps = state => ({
-  clockTime: state.clockTime,
-  secondsElapsed: state.secondsElapsed,
-});
-
+}
 Clock.propTypes = {
   clockTime: PropTypes.number.isRequired,
   secondsElapsed: PropTypes.number.isRequired,
 };
 
-export default connect(
-  mapStateToProps,
-  null
-)(Clock);
+export default Clock;
