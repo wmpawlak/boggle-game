@@ -7,15 +7,15 @@ import Button from '../Button/Button';
 import SjpChecker from '../SjpChecker/SjpChecker';
 import { drawLetters } from '../../redux/actions';
 import './Container.css';
+import ClockContainer from '../ClockContainer/ClockContainer';
 
 const Container = ({ drawLetters }) => {
   return (
     <div>
       <Board />
+      <ClockContainer />
       <div className="buttons-menu">
         <Button name={'losuj'} onClick={drawLetters} />
-        <Button name={'czas start'} />
-        <Button name={'czas stop'} />
         <Button name={'zasady'} />
       </div>
       <SjpChecker />
