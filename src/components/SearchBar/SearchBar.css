@@ -10,13 +10,14 @@
 
 .search input {
   background-color: #8d515c;
-  border: 5px solid #8d515c;
+  border: 0px;
   border-radius: 15px 0px 0px 15px;
   color: #DD93A4;
   width: 355px;
   height: 60px;
   text-align: center;
   font-weight: 600;
+  padding-left: 15%;
 }
 
 .search input:focus{
@@ -28,7 +29,7 @@
   color: #DD93A4;
   text-transform: uppercase;
   text-align: center;
-  padding-left: 15%;
+  padding-right: 15%;
 }
 
 .searchTerm {
@@ -42,7 +43,7 @@
 
 .searchButton {
   background-color: #8d515c;
-  border: 5px solid #8d515c;
+  border: 0px;
   border-radius: 0px 15px 15px 0px;
   color: #DD93A4;
   box-sizing: border-box;

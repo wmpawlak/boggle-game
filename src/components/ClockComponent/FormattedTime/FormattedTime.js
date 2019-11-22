@@ -9,7 +9,7 @@ function FormattedTime(props) {
     seconds < 10 ? `0${seconds}` : seconds
   }`;
 
-  return <p>{clockTime}</p>;
+  return <div className="clock-numbers">{clockTime}</div>;
 }
 FormattedTime.propTypes = {
   time: PropTypes.number.isRequired,
