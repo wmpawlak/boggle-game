@@ -9,7 +9,6 @@ function FormattedTime(props) {
     seconds < 10 ? `0${seconds}` : seconds
   }`;
 
-  document.title = clockTime;
   return <p>{clockTime}</p>;
 }
 FormattedTime.propTypes = {

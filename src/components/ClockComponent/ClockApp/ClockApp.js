@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 
 import Clock from '../Clock/Clock';
 import ClockControls from '../ClockControls/ClockControls';
+import './ClockApp.css';
 
 class ClockApp extends React.Component {
   componentDidUpdate(prevProps) {
     const currentProps = this.props;
+
     if (currentProps.isTimerRunning && !prevProps.isTimerRunning) {
       this.timerID = setInterval(() => {
         currentProps.runTimer();
@@ -14,6 +16,11 @@ class ClockApp extends React.Component {
     }
 
     if (!currentProps.isTimerRunning && prevProps.isTimerRunning) {
+      clearInterval(this.timerID);
+    }
+
+    if (currentProps.clockTime === currentProps.secondsElapsed) {
+      //put here a alarm sound and make pop up with 'time's up!'
       clearInterval(this.timerID);
     }
   }
@@ -31,18 +38,20 @@ class ClockApp extends React.Component {
     } = this.props;
     const { startTimer, stopTimer } = this.props;
     return (
-      <div>
-        <div>
+      <div className="clock-app">
+        <div className="clock-buttons">
+          <ClockControls
+            isTimerRunning={isTimerRunning}
+            onStart={startTimer}
+            onStop={stopTimer}
+          />
+        </div>
+        <div className="clock">
           <Clock
             clockTime={clockTime}
             secondsElapsed={secondsElapsed}
             isTimerRunning={isTimerRunning}
             isTimerPaused={isTimerPaused}
-          />
-          <ClockControls
-            isTimerRunning={isTimerRunning}
-            onStart={startTimer}
-            onStop={stopTimer}
           />
         </div>
       </div>
