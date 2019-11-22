@@ -1,12 +1,6 @@
 .board {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
   color: #6F2232;
   font-size: 72px;
   font-weight: 700;
-  width: 425px;
-  height: 425px;
-  box-sizing: border-box;
 };
+

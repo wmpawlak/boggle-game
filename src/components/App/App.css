@@ -1,0 +1,63 @@
+body {
+  background-color: #9c3044;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  width: 425px;
+  height: 425px;
+  margin-bottom: 8px;
+}
+.letter {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+}
+.buttons {
+  display: border-box;
+  height: 50px;
+  width: 206px;
+}
+.buttons-menu {
+  display: flex;
+  justify-content: space-evenly;
+}
+.clock-app {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.clock {
+  height: 50px;
+  width: 206px;
+}
+.clock-numbers {
+  display: flex;
+  justify-content: center;
+}
+.search-form {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.search input {
+  width: 357px;
+  height: 60px;
+}
+.searchButton {
+  box-sizing: border-box;
+  width: 60px;
+}
