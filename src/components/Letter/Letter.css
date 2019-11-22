@@ -2,9 +2,6 @@
   background-color: #dd93a4;
   border-radius: 15px;
   text-transform: uppercase;
-  box-sizing: border-box;
-  width: 100px;
-  height: 100px;
 }
 
 .letter > .letter{

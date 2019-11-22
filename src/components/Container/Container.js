@@ -6,7 +6,6 @@ import Board from '../Board/Board';
 import Button from '../Button/Button';
 import SjpChecker from '../SjpChecker/SjpChecker';
 import { drawLetters } from '../../redux/actions';
-import './Container.css';
 import ClockContainer from '../ClockComponent/ClockContainer/ClockContainer';
 
 const Container = ({ drawLetters }) => {

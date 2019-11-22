@@ -10,11 +10,7 @@ class SjpChecker extends React.Component {
   };
 
   render() {
-    return (
-      <div className="ui field">
-        <SearchBar onFormSubmit={this.onWordSubmit} />
-      </div>
-    );
+    return <SearchBar onFormSubmit={this.onWordSubmit} />;
   }
 }
 
