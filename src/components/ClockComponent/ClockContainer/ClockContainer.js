@@ -1,11 +1,6 @@
 import { connect } from 'react-redux';
-import {
-  startTimer,
-  stopTimer,
-  resetTimer,
-  runTimer,
-} from '../../redux/actions';
-import TimerApp from '../TimerApp/TimerApp';
+import { startTimer, stopTimer, runTimer } from '../../../redux/actions';
+import ClockApp from '../ClockApp/ClockApp';
 
 const mapStateToProps = state => ({
   clockTime: state.clockTime,
@@ -18,11 +13,10 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
   startTimer,
   stopTimer,
-  resetTimer,
   runTimer,
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(TimerApp);
+)(ClockApp);

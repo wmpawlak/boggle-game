@@ -19,14 +19,14 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="field-container">
+      <div>
         <form onSubmit={this.onFormSubmit}>
-          <div className="wrap">
+          <div>
             <div className="search">
               <input
                 type="text"
                 className="searchTerm"
-                placeholder="Sprawdź słowo"
+                placeholder="sprawdź słowo"
                 onChange={this.onInputChange}
               />
               <button type="submit" className="searchButton">
