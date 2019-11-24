@@ -4,6 +4,7 @@ import {
   STOP_TIMER,
   RUN_TIMER,
   UPDATE_SESSION_LENGTH,
+  TOGGLE_ALARM_SOUND
 } from './actionTypes';
 
 export const drawLetters = () => ({
@@ -25,4 +26,8 @@ export const runTimer = () => ({
 export const updateSessionLength = value => ({
   type: UPDATE_SESSION_LENGTH,
   value,
+});
+
+export const toggleAlarmSound = () => ({
+  type: TOGGLE_ALARM_SOUND,
 });

@@ -10,7 +10,7 @@ import ClockContainer from '../ClockComponent/ClockContainer/ClockContainer';
 
 const Container = ({ drawLetters }) => {
   return (
-    <div>
+    <div className="container">
       <ClockContainer />
       <SjpChecker />
       <Board />

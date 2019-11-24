@@ -1,4 +1,4 @@
-export const lettersBoard = new Array(16).fill(0);
+export const lettersBoard = new Array(16).fill('A');
 
 export const defaultState = {
   lettersBoard: Array.from(lettersBoard),
