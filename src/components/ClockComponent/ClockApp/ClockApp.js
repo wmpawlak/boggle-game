@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Clock from '../Clock/Clock';
 import ClockControls from '../ClockControls/ClockControls';
 import './ClockApp.css';
+import alarmSound from '../../../alarm/alarm.mp3';
 
 class ClockApp extends React.Component {
   componentDidUpdate(prevProps) {
@@ -20,8 +21,10 @@ class ClockApp extends React.Component {
     }
 
     if (currentProps.clockTime === currentProps.secondsElapsed) {
-      //put here a alarm sound and make pop up with 'time's up!'
       clearInterval(this.timerID);
+      const sound = new Audio(alarmSound);
+      sound.play();
+      setTimeout(() => sound.pause(), 1500);
     }
   }
 
