@@ -26,6 +26,5 @@ export const defaultState = {
   isTimerRunning: false,
   isTimerPaused: false,
   isBreakTime: false,
-  isAlarmON: true,
   isAutoStartON: true,
 };
