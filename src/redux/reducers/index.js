@@ -25,6 +25,4 @@ export const defaultState = {
   secondsElapsed: 0,
   isTimerRunning: false,
   isTimerPaused: false,
-  isBreakTime: false,
-  isAutoStartON: true,
 };
