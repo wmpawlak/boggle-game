@@ -24,7 +24,7 @@ class ClockApp extends React.Component {
       clearInterval(this.timerID);
       const sound = new Audio(alarmSound);
       sound.play();
-      setTimeout(() => sound.pause(), 1500);
+      setTimeout(() => sound.pause(), 2500);
     }
   }
 
