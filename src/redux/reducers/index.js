@@ -21,7 +21,7 @@ export const defaultState = {
     ['ł', 'n', 'u', 'i', 'h', 'm'],
   ],
   sessionLength: 3,
-  clockTime: 2000,
+  clockTime: 180,
   secondsElapsed: 0,
   isTimerRunning: false,
   isTimerPaused: false,
