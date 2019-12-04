@@ -140,7 +140,7 @@ body {
   padding-right: 15%;
 }
 
-.search input:focus::placeholder{
+.search input:focus::placeholder {
   color: transparent;
 }
 
@@ -169,4 +169,24 @@ body {
 .searchButton i:active {
   position: relative;
   top: 2px;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .container {
+  width: 448px;
+  height: 525px;
+  background: rgb(140, 140, 140);
+  border-radius: 5px;
+  border: 2px solid grey;
 }
