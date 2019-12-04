@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './SearchBar.css';
-
 class SearchBar extends React.Component {
   state = {
     word: '',

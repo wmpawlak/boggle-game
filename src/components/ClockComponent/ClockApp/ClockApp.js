@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import Clock from '../Clock/Clock';
 import ClockControls from '../ClockControls/ClockControls';
-import './ClockApp.css';
 import alarmSound from '../../../alarm/alarm.mp3';
 
 class ClockApp extends React.Component {

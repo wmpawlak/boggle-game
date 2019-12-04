@@ -1,0 +1,172 @@
+body {
+  background-color: #9c3044;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  height: 750px;
+}
+
+.board {
+  color: #6f2232;
+  font-size: 72px;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  width: 425px;
+  height: 425px;
+  margin-bottom: 8px;
+}
+
+.letter {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  background-color: #dd93a4;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
+
+.letter > .letter {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  padding-top: 4%;
+}
+
+.buttons {
+  display: border-box;
+  height: 50px;
+  width: 206px;
+  box-shadow: 0px 10px 14px -7px #000000a1;
+  background: linear-gradient(to bottom, #c3083f 5%, #a70737 100%);
+  border: 0px;
+  border-radius: 15px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+  outline: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.buttons-menu {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttons:hover {
+  background: linear-gradient(to bottom, #ffa851 5%, #d88635 100%);
+  background-color: #c3083f;
+}
+
+.buttons:active {
+  position: relative;
+  top: 1px;
+}
+
+.clock-app {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.clock {
+  height: 50px;
+  width: 206px;
+  color: #6f2232;
+  background: #dd93a4;
+  font-size: 36px;
+  font-weight: 900;
+  border: 0px;
+  border-radius: 15px;
+  cursor: pointer;
+  outline: 0;
+  text-transform: uppercase;
+}
+
+.clock:hover {
+  background: linear-gradient(to bottom, #ffa851 5%, #d88635 100%);
+}
+
+.clock-numbers {
+  padding-top: 8.5%;
+}
+
+.clock-numbers {
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 30px;
+  text-align: center;
+}
+
+.search input {
+  width: 357px;
+  height: 60px;
+  background-color: #8d515c;
+  border: 0px;
+  border-radius: 15px 0px 0px 15px;
+  color: #dd93a4;
+  text-align: center;
+  font-weight: 600;
+  padding-left: 16%;
+}
+
+.search input:focus {
+  outline: none;
+  caret-color: #dd93a4;
+}
+
+.search input::placeholder {
+  color: #dd93a4;
+  text-transform: uppercase;
+  text-align: center;
+  padding-right: 15%;
+}
+
+.search input:focus::placeholder{
+  color: transparent;
+}
+
+.searchTerm {
+  outline: none;
+  box-sizing: border-box;
+}
+
+.searchTerm:focus {
+  outline: 0;
+}
+
+.searchButton {
+  box-sizing: border-box;
+  width: 60px;
+  background-color: #8d515c;
+  border: 0px;
+  border-radius: 0px 15px 15px 0px;
+  color: #dd93a4;
+}
+
+.searchButton:focus {
+  outline: 0;
+}
+
+.searchButton i:active {
+  position: relative;
+  top: 2px;
+}
