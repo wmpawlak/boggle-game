@@ -2,8 +2,10 @@ body {
   background-color: #9c3044;
   display: flex;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 100px;
+  height: 750px;
 }
+
 .board {
   color: #6f2232;
   font-size: 72px;
@@ -17,6 +19,7 @@ body {
   height: 425px;
   margin-bottom: 8px;
 }
+
 .letter {
   box-sizing: border-box;
   width: 100px;
@@ -127,7 +130,7 @@ body {
 
 .search input:focus {
   outline: none;
-  caret-color: transparent;
+  caret-color: #dd93a4;
 }
 
 .search input::placeholder {
@@ -135,6 +138,10 @@ body {
   text-transform: uppercase;
   text-align: center;
   padding-right: 15%;
+}
+
+.search input:focus::placeholder{
+  color: transparent;
 }
 
 .searchTerm {
