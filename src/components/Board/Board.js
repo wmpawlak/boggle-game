@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import Letter from '../Letter/Letter';
-import './Board.css';
 
 const Board = ({ lettersBoard }) => {
   const renderLetter = i => {
