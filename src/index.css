@@ -177,7 +177,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  background: rgba(255, 255, 255, 0.6);
+  background: #ffffff99;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,8 +185,32 @@ body {
 
 .modal .container {
   width: 448px;
-  height: 525px;
-  background: rgb(140, 140, 140);
+  height: 650px;
+  position: relative;
+  bottom: 25px;
+  background: #dd93a4;
   border-radius: 5px;
-  border: 2px solid grey;
+  border: 2px solid #9c304475;
+  padding: 0px 12px 12px 12px;
+}
+
+.modal .rules-text p {
+  margin-bottom: 6px;
+  text-align: justify;
+}
+
+.modal .close {
+  width: 100%;
+  position: relative;
+  left: 210px;
+  top: 2px;
+}
+
+.modal .close:hover {
+  color: red;
+}
+
+.modal .close:active {
+  position: relative;
+  bottom: 8px;
 }
