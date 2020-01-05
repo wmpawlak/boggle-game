@@ -5,6 +5,7 @@ import {
   STOP_TIMER,
   RUN_TIMER,
   UPDATE_SESSION_LENGTH,
+  RULES_MODAL_SWITCH,
 } from '../actions/actionTypes';
 
 export const reducer = (state = defaultState, action) => {
@@ -46,6 +47,12 @@ export const reducer = (state = defaultState, action) => {
     return {
       ...state,
       secondsElapsed: state.secondsElapsed + 1,
+    };
+  }
+  if (action.type === RULES_MODAL_SWITCH) {
+    return {
+      ...state,
+      isRulesModalOn: !state.isRulesModalOn,
     };
   }
   if (action.type === UPDATE_SESSION_LENGTH) {

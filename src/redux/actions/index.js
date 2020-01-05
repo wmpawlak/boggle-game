@@ -4,7 +4,8 @@ import {
   STOP_TIMER,
   RUN_TIMER,
   UPDATE_SESSION_LENGTH,
-  TOGGLE_ALARM_SOUND
+  TOGGLE_ALARM_SOUND,
+  RULES_MODAL_SWITCH,
 } from './actionTypes';
 
 export const drawLetters = () => ({
@@ -30,4 +31,8 @@ export const updateSessionLength = value => ({
 
 export const toggleAlarmSound = () => ({
   type: TOGGLE_ALARM_SOUND,
+});
+
+export const modalSwitch = () => ({
+  type: RULES_MODAL_SWITCH,
 });

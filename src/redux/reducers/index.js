@@ -28,4 +28,5 @@ export const defaultState = {
   isBreakTime: false,
   isAlarmON: true,
   isAutoStartON: true,
+  isRulesModalOn: false,
 };
