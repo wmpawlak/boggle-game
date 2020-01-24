@@ -10,23 +10,11 @@ const Rules = ({ modalSwitch, isRulesModalOn }) => {
       <div className="container">
         <i className="close icon" onClick={modalSwitch} />
         <div className="rules-text">
-          <p>Twoja ulubiona gra słowna teraz zawsze pod ręką!</p>
-          <p>
-            Możesz grać sam, ale prawdziwa zabawa zaczyna się gdy zaprosisz znajomych.
-          </p>
           <p>
             Plansza składa się z 16 pól, na których znajdują się wylosowane
             litery. Poza grą potrzebujesz jedynie kartki i czegoś do pisania dla
             każdego z graczy. Zadaniem graczy jest znalezienie jak największej
             liczby słów w ciągu trzyminutowej rundy i zapisanie ich na kartkach.
-          </p>
-          <p>Słowa można tworzyć zgodnie z następującymi zasadami:</p>
-          <p>
-            Litery w słowie muszą tworzyć łańcuch, czyli litery sąsiadujące ze
-            sobą w słowie muszą sąsiadować ze sobą również na planszy (przylegać
-            do siebie bokami lub rogami). Danego pola z literą nie można
-            wykorzystać w stworzonym słowie więcej niż raz. Słowa muszą zawierać
-            przynajmniej trzy litery.
           </p>
           <p>
             Gra rozpoczyna się po wylosowaniu liter i kliknięciu przycisku
